@@ -53,7 +53,7 @@ def main(page: ft.Page):
                         ft.Container(
                             content=ft.Video(
                                 expand=True,
-                                playlist=[ft.VideoMedia("gabi.mp4")],
+                                playlist=[ft.VideoMedia("assets/gabi.mp4")], # Fixed asset path for video
                                 playlist_mode=ft.PlaylistMode.LOOP,
                                 fill_color=ft.colors.BLACK26,
                                 aspect_ratio=16/9,
@@ -167,10 +167,11 @@ def main(page: ft.Page):
                 )
             )
 
+        # Added 'assets/' to images for clean deployment retrieval
         gallery_images = [
-            "Screenshot 2026-05-31 102944.png",
-            "Screenshot 2026-05-31 162820.png",
-            "Screenshot 2026-05-31 164844.png"
+            "assets/Screenshot 2026-05-31 102944.png",
+            "assets/Screenshot 2026-05-31 162820.png",
+            "assets/Screenshot 2026-05-31 164844.png"
         ]
 
         pic_grid = ft.ResponsiveRow(
@@ -279,7 +280,7 @@ def main(page: ft.Page):
                 ft.Text("Commit History", size=16, weight=ft.FontWeight.BOLD),
                 ft.Container(
                     content=ft.Image(
-                        src="commit_logs.png",
+                        src="assets/commit_history.png", # Fixed asset directory path and name match
                         fit=ft.ImageFit.CONTAIN,
                         border_radius=6
                     ),
@@ -295,7 +296,7 @@ def main(page: ft.Page):
                 ft.Text("Pull Request Logs", size=16, weight=ft.FontWeight.BOLD),
                 ft.Container(
                     content=ft.Image(
-                        src="pull_requests.png",
+                        src="assets/pull_requests.png", # Fixed asset directory path
                         fit=ft.ImageFit.CONTAIN,
                         border_radius=6
                     ),
